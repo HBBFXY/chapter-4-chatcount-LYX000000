@@ -1,22 +1,22 @@
-# 从键盘输入一行字符
+# 接收用户输入的一行字符
 string = input()
 # 初始化各类字符计数器
-letter_count = 0
-digit_count = 0
-space_count = 0
-other_count = 0
-# 遍历每个字符进行统计
+letter = 0
+digit = 0
+space = 0
+other = 0
+# 遍历每个字符进行类型判断和计数
 for char in string:
-    if char.isalpha():  # 判断是否为英文字符（字母）
-        letter_count += 1
-    elif char.isdigit():  # 判断是否为数字
-        digit_count += 1
-    elif char.isspace():  # 判断是否为空格
-        space_count += 1
-    else:  # 其他字符
-        other_count += 1
-# 按照要求格式输出
-print(f"英文字符: {letter_count}")
-print(f"数字: {digit_count}")
-print(f"空格: {space_count}")
-print(f"其他字符: {other_count}")文件用于编写代码
+    if char.isalpha():
+        letter += 1
+    elif char.isdigit():
+        digit += 1
+    elif char.isspace():
+        space += 1
+    else:
+        other += 1
+# 按要求格式输出结果
+print(f"英文字符: {letter}")
+print(f"数字: {digit}")
+print(f"空格: {space}")
+print(f"其他字符: {other}")
